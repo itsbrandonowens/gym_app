@@ -1,0 +1,122 @@
+/* General reset for body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+  }
+  
+  /* Main container for the workout generator */
+  .workout_generator_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-left:5%;
+    height: 60vh;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top:2%;
+  }
+  
+  /* Title styling */
+  .workout_title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Button styling for generating workout */
+  .generate_ppl_workout {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #5f9ea0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .generate_ppl_workout:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .generate_ppl_workout:hover:not(:disabled) {
+    background-color: #4b7c79;
+  }
+  
+  /* Container for the generated workout */
+  .generated_workout_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  /* Box for each day (pull, push, leg day) */
+  .day_container {
+    background-color: #e7f0f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Day title */
+  .day_text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* List for exercises */
+  .exercise_list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .exercist_list_item {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .exercise_name {
+    font-weight: bold;
+  }
+  
+  .exercise_weight {
+    color: #666;
+    margin-left: 10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .generated_workout_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .generate_ppl_workout {
+      font-size: 1rem;
+    }
+  
+    .workout_title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+  

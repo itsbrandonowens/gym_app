@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../styles/WorkoutGenerator.css';
 const WorkoutGenerator = () => {
   const [workout, setWorkout] = useState(null);
   const [loading, setLoading] = useState(false);
