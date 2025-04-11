@@ -21,19 +21,21 @@ const WorkoutGenerator = () => {
   };
 
   return (
-    <div className='workout_generator_container'>
-      <h1 className='workout_title'>Workout Generator</h1>
-      <button className= "generate_ppl_workout" onClick={generateWorkout} disabled={loading}>
-        {loading ? 'Generating...' : 'Generate PPL'}
-      </button>
+    <div>
+      <a href= "/"> <button className='home_button' >🏠</button></a>
+      <div className='workout_generator_container'>
+        <h1 className='workout_title'>Push, Pull, Legs: Workout Generator</h1>
+        <button className="generate_ppl_workout" onClick={generateWorkout} disabled={loading}>
+          {loading ? 'Generating...' : 'Generate PPL'}
+        </button>
 
-      {workout && (
-        <div className='generated_workout_container'>
-          {Object.entries(workout).map(([day, muscles]) => (
-            <div className='day_container' key={day}>
-              <h2 className='day_text'>{day}</h2>
-              {Object.entries(muscles).map(([muscle, exercises]) => (
-                
+        {workout && (
+          <div className='generated_workout_container'>
+            {Object.entries(workout).map(([day, muscles]) => (
+              <div className='day_container' key={day}>
+                <h2 className='day_text'>{day}</h2>
+                {Object.entries(muscles).map(([muscle, exercises]) => (
+
                   <ul className='exercise_list'>
                     {exercises.map((exercise) => (
                       <li className='exercist_list_item' key={exercise.id}>
@@ -41,12 +43,13 @@ const WorkoutGenerator = () => {
                       </li>
                     ))}
                   </ul>
-                
-              ))}
-            </div>
-          ))}
-        </div>
-      )}
+
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

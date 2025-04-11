@@ -31,6 +31,7 @@ const ExercisesByMuscleGroup = () => {
 
     return (
         <div>
+            <a href= "/"> <button className='home_button' >🏠</button></a>
             <h1 className='muscle-group-title-main'> All Exercises By Muscle Group </h1>
             <div className="exercises-container">
                 {Object.entries(exercises).map(([muscleGroup, exercisesList]) => (

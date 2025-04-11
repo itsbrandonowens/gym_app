@@ -1,0 +1,10 @@
+.home_button {
+    width:5vw;
+    height:5vw;
+    font-size:3rem;
+    position:absolute;
+    top:2%;
+    left:1%;
+    border-radius: 20px;
+    cursor:pointer;
+}
